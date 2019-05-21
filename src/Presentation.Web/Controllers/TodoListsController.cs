@@ -72,8 +72,7 @@ namespace Presentation.Web.Controllers
         {
             var list = _repo.Get(Id);
             return
-                list.Todos.Select(t => new TodoDisplay() { id = t.id; Title = t.Title; Completed = t.Complete });
-            ;
+                list.Todos.Select(t => new TodoDisplay { Id = Id, Title = t.Title, Completed = t.Completed });
         }
     }
 }
